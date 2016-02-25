@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+}
+h1 {
+	color: #ac4;
+}
+.search-bar {
+	float: right;
+	border: 2px solid #ac4;
+	border-radius: 2px;
+	margin-right: 10px;
+}
+.item {
+	width: 40%;
+	border: 2px solid black;
+	margin: 5px;
+	padding: 5px;
+}
+.glyphicon-ok {
+	color: green;
+}

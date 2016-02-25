@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="worldApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body ng-controller="worldController">
+	<h1>Welcome to Earth</h1>
+	<div class=search-bar>
+		<input type="text" ng-model="searchWord">
+		<button ng-click="search()">Search</button>
+
+	</div>
+
+	<button class="btn btn-info btn-lg" ng-click="loadCountries()">Load all Countries</button>
+	<div class="item" ng-repeat="country in countries">
+		<button class="btn btn-default btn-xs pull-right" ng-click="visited($index)" ng-disabled="visit" ng-class="visitColor">{{isVisited}}</button>
+	<span class="glyphicon glyphicon-ok pull-right" ng-show="country.visitCheck"></span>
+		<h2>{{country.name}}</h2>
+		<p>{{country.region}}</p>
+	</div>
+</body>
+</html>
