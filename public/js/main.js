@@ -1,7 +1,6 @@
 var app = angular.module('worldApp', [])
 	app.controller('worldController', ['$scope', '$http', function($scope, $http){
 
-		$scope.isVisited = 'Not visited'
 		$scope.visit = false
 
 
@@ -10,7 +9,6 @@ var app = angular.module('worldApp', [])
 			$http.get('/countries').then(function(returnData){
 				$scope.countries = returnData.data
 			})
-			// $scope.country.isVisited = 'Not Visited'
 		}
 
 		$scope.search = function(){
@@ -21,11 +19,12 @@ var app = angular.module('worldApp', [])
 
 		$scope.visited = function(index){
 			$http.post('/visited', {}).then(function(returnData){
-				$scope.visit = true
-				$scope.isVisited = 'Visited'
-				$scope.visitColor = 'btn-success'
-				$scope.visitCheck = true
+				
 			})
+			$scope.visit = true
+			$scope.country[index].isVisited = 'Visited'
+			$scope.country[index].visitColor = 'btn-success'
+			$scope.visitCheck = true
 		}
 
 

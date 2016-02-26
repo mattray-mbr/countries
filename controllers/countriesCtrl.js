@@ -27,5 +27,5 @@ function visitCountry(req, res){
 module.exports = {
 	getCountries     : getCountries,
 	searchCountries  : searchCountries,
-	visitCountry     : visitCountry,
+	visitCountry     : visitCountry, 
 }

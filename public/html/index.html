@@ -18,7 +18,7 @@
 
 	<button class="btn btn-info btn-lg" ng-click="loadCountries()">Load all Countries</button>
 	<div class="item" ng-repeat="country in countries">
-		<button class="btn btn-default btn-xs pull-right" ng-click="visited($index)" ng-disabled="visit" ng-class="visitColor">{{isVisited}}</button>
+		<button class="btn btn-default btn-xs pull-right" ng-click="visited($index)" ng-disabled="visit" ng-class="visitColor">{{country.isVisited = 'Not visited'}}</button>
 	<span class="glyphicon glyphicon-ok pull-right" ng-show="country.visitCheck"></span>
 		<h2>{{country.name}}</h2>
 		<p>{{country.region}}</p>
